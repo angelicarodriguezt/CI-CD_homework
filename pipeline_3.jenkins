@@ -21,8 +21,7 @@ pipeline {
 
     stage('checkout to release') {
       steps{
-         git checkout release
-         git merge develop
+         git branch: 'release1.0'
       }
     }
    stage('Deploy') {
