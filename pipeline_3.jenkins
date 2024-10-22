@@ -25,11 +25,7 @@ pipeline {
          url: 'https://github.com/angelicarodriguezt/CI-CD_homework.git'
       }
     }
-    stage('merge') {
-      steps{
-         git merge: 'develop'
-      }
-    }
+
    stage('Deploy') {
      steps {
        echo 'Deploying...'
