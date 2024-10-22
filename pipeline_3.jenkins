@@ -27,7 +27,7 @@ pipeline {
     }
     stage('merge') {
       steps{
-         git merge develop
+         git merge: 'develop'
       }
     }
    stage('Deploy') {
