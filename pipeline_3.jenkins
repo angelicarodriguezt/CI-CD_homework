@@ -21,7 +21,8 @@ pipeline {
 
     stage('checkout to release') {
       steps{
-         git branch: 'release1.0'
+         git branch: 'release1.0',
+         url: 'https://github.com/angelicarodriguezt/CI-CD_homework.git'
       }
     }
    stage('Deploy') {
