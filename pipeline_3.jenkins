@@ -12,15 +12,19 @@ pipeline {
         steps{      
           sh("dir ${JENKINS_HOME}")
         }
-
-
       }
-
    stage('Test') {
      steps {
         echo 'Testing...'
      }
    }
+
+    stage('checkout to release') {
+      steps{
+         git checkout release
+         git merge develop
+      }
+    }
    stage('Deploy') {
      steps {
        echo 'Deploying...'
